@@ -12,4 +12,6 @@ In order to access the server UI you have the following options:
 After reaching the UI the first time you can login with username: admin and the password will be the
 name of the server pod. You can get the pod name by running:
 
-kubectl get pods -n {{ .Release.Namespace }} -l app.kubernetes.io/name={{ include "argo-cd.name" . }}-server -o name | cut -d'/' -f 2
+kubectl -n {{ .Release.Namespace }} \
+    get secrets argocd-initial-admin-secret \
+    -o jsonpath='{.data.password}' | base64 -d && echo
