@@ -375,7 +375,7 @@ server:
 
   ## Additional command line arguments to pass to argocd-server
   ##
-  extraArgs: []
+  extraArgs:   
   #  - --insecure
 
   ## Environment variables to pass to argocd-server
@@ -496,7 +496,7 @@ server:
     automountServiceAccountToken: true
 
   ingress:
-    enabled: false
+    enabled: true
     annotations: {}
     labels: {}
     ingressClassName: ""

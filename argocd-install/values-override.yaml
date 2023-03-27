@@ -13,6 +13,9 @@ server:
       - name: argo-helm
         type: helm
         url: https://argoproj.github.io/argo-helm
+      - name: traefik
+        type: helm
+        url: https://helm.traefik.io/traefik
   additionalApplications: 
     - name: argocd
       namespace: argocd
