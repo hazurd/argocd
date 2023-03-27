@@ -31,7 +31,7 @@ server:
           - ../values-override.yaml
         path: argocd-install/argo-cd
         repoURL: https://github.com/hazurd/argocd.git
-        targetRevision: HEAD
+        targetRevision: GIT-2-argo-cd
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
@@ -44,7 +44,7 @@ server:
       source:
         path: argocd-apps
         repoURL: https://github.com/hazurd/argocd.git
-        targetRevision: HEAD
+        targetRevision: GIT-2-argo-cd
         directory:
           recurse: true
           jsonnet: {}
@@ -61,7 +61,7 @@ server:
       source:
         path: argocd-appprojects
         repoURL: https://github.com/hazurd/argocd.git
-        targetRevision: HEAD
+        targetRevision: GIT-2-argo-cd
         directory:
           recurse: true
           jsonnet: {}
