@@ -11,7 +11,7 @@ spec:
   source:
     path: traefik/
     repoURL: https://github.com/hazurd/argocd.git
-    targetRevision: HEAD
+    targetRevision: GIT-2-argo-cd
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
